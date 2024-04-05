@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risograph-inspired Design</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+            /* Background color for the entire page */
+        }
+
+        .shape-container {
+            width: 600px;
+            height: 600px;
+            position: relative;
+            /* background-image: url('https://img.freepik.com/free-photo/white-paper-texture_1194-2324.jpg?w=1380&t=st=1712198796~exp=1712199396~hmac=552dca90a752c3e63995669be451f09785aacbb79a82bad42aa52aa631f1d917'); */
+            background-size: cover;
+            background-repeat: repeat;
+            mix-blend-mode: multiply;
+
+        }
+
+        .shape {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: multiply;
+            transform: translate(190%, 90%);
+            /* opacity: 0.70; */
+        }
+
+        .triangle {
+            fill: #E176D7;
+            animation: moveUpDown 3s infinite linear;
+        }
+
+        .circle {
+            fill: #49aaec;
+            animation: rotate 3s infinite linear;
+        }
+
+        .square {
+            fill: #F5DC34;
+            animation: moveLeftRight 3s infinite linear;
+        }
+
+        @keyframes moveUpDown {
+            0% {
+                transform: translate(-20%, -30%);
+            }
+
+            50% {
+                transform: translate(-20%, -40%);
+            }
+
+            100% {
+                transform: translate(-20%, -30%);
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        @keyframes moveLeftRight {
+            0% {
+                transform: translate(-20%, -50%);
+            }
+
+            50% {
+                transform: translate(-90%, -50%);
+            }
+
+            100% {
+                transform: translate(-20%, -50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shape-container">
+
+        <svg class="shape triangle" viewBox="0 0 100 100">
+            <polygon points="53,5 95,95 15,95" />
+        </svg>
+
+        <svg class="shape circle" viewBox="0 0 100 100">
+            <circle cx="60" cy="60" r="30" />
+        </svg>
+
+        <svg class="shape square" viewBox="0 0 100 100">
+            <rect x="60" y="50" width="30" height="30" />
+        </svg>
+
+    </div>
+</body>
+
+</html>
